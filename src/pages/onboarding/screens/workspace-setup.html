@@ -1,0 +1,444 @@
+<!-- 1. Sticky Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-[#F7F5F0]/90 backdrop-blur-md border-b border-brand-border transition-all">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="flex items-center gap-2.5 focus:outline-none group" href="#">
+<div class="w-9 h-9 rounded-lg bg-brand-orange flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
+<span class="material-symbols-outlined text-2xl font-bold">inventory_2</span>
+</div>
+<span class="font-display font-bold text-2xl tracking-tight text-brand-ink">STOCKORA</span>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-brand-muted">
+<a class="hover:text-brand-orange transition-colors" href="#features">Features</a>
+<a class="hover:text-brand-orange transition-colors" href="#services">Services</a>
+<a class="hover:text-brand-orange transition-colors" href="#how-it-works">How It Works</a>
+<a class="hover:text-brand-orange transition-colors" href="#faq">Pricing &amp; FAQ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-[15px] font-medium text-brand-muted hover:text-brand-ink px-3 py-2 transition-colors" href="#/sign-in">
+          Sign In
+        </a>
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-brand-orange text-white text-[15px] font-semibold hover:bg-brand-orangeHover transition-all shadow-sm hover:shadow active:scale-[0.98]" href="#/create-account">
+          Get Started Free
+        </a>
+</div>
+</div>
+</header>
+<main class="w-full"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<!-- Sub-Header / Onboarding Progress Banner -->
+<div class="w-full bg-surface-container-low rounded-xl p-4 sm:p-6 mb-8 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-surface-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-headline-sm">tune</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-primary uppercase font-bold tracking-wider">Step 1 of 3</span>
+<span class="text-on-secondary-variant text-label-sm font-label-md">• Business Setup</span>
+</div>
+<p class="font-headline-sm text-on-surface">Workspace Calibration</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="w-5 h-5 rounded-full bg-primary-container text-surface-white text-label-sm font-label-md flex items-center justify-center">1</span>
+<span class="font-label-md text-on-surface font-semibold">Workspace</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-label-sm">chevron_right</span>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="w-5 h-5 rounded-full bg-surface-dim text-on-surface text-label-sm font-label-md flex items-center justify-center">2</span>
+<span class="font-label-md">Inventory Profile</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-label-sm">chevron_right</span>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="w-5 h-5 rounded-full bg-surface-dim text-on-surface text-label-sm font-label-md flex items-center justify-center">3</span>
+<span class="font-label-md">Starter Catalog</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 text-secondary hover:text-on-surface font-label-md py-2 px-3 rounded-lg hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm">bookmark</span>
+<span>Save &amp; Exit</span>
+</button>
+</div>
+</div>
+<!-- Linear visual progress bar -->
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-4 overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full w-1/3 transition-all duration-500"></div>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Primary Form Interactive Flow -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-6 sm:p-8 lg:p-10 shadow-sm">
+<div class="mb-8">
+<h1 class="font-display-hero text-on-surface tracking-tight mb-2">Let's set up your inventory workspace</h1>
+<p class="font-body-lg text-secondary leading-relaxed">
+            Tell us a bit about what you stock so STOCKORA can configure your reorder thresholds, inventory alerts, and tracking defaults. Takes about 2 minutes.
+          </p>
+</div>
+<form class="space-y-8" id="onboardingForm">
+<!-- 1. Workspace Identity -->
+<div class="space-y-2">
+<label class="block font-headline-sm text-on-surface" for="workspaceName">
+              Workspace or Business Name
+            </label>
+<p class="font-label-sm text-text-secondary">This will be your shared inventory environment URL and storefront tag.</p>
+<div class="relative rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-headline-sm">storefront</span>
+</div>
+<input class="block w-full h-12 pl-11 pr-4 bg-surface-bright text-on-surface rounded-lg font-body-md shadow-sm focus:bg-surface-white transition-all outline-none" id="workspaceName" name="workspaceName" placeholder="e.g. Apex Studio Store" type="text" value="Bloom &amp; Craft Botanicals"/>
+</div>
+</div>
+<!-- 2. Business Category Pills -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<label class="block font-headline-sm text-on-surface">Primary Stock Category</label>
+<span class="font-label-sm text-text-secondary">Select best match</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="categoryPillGroup">
+<!-- Selected by default -->
+<label class="relative flex items-center gap-3 p-3.5 rounded-xl cursor-pointer bg-primary-fixed/30 shadow-sm transition-all group category-card">
+<input checked="" class="sr-only" name="business_category" type="radio" value="boutique"/>
+<div class="w-8 h-8 rounded-lg bg-primary-container text-surface-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-data-metric">local_mall</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-semibold text-on-surface">Boutique Retail</span>
+<span class="font-label-sm text-secondary">Specialty goods &amp; gifts</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-primary check-indicator text-headline-sm">check_circle</span>
+</label>
+<label class="relative flex items-center gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all group category-card">
+<input class="sr-only" name="business_category" type="radio" value="cosmetics"/>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0 group-hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-data-metric">spa</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-semibold text-on-surface">Artisan Cosmetics</span>
+<span class="font-label-sm text-secondary">Skincare &amp; apothecary</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-secondary opacity-0 check-indicator text-headline-sm">check_circle</span>
+</label>
+<label class="relative flex items-center gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all group category-card">
+<input class="sr-only" name="business_category" type="radio" value="food_beverage"/>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0 group-hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-data-metric">bakery_dining</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-semibold text-on-surface">Packaged Food</span>
+<span class="font-label-sm text-secondary">Pantry, coffee &amp; bev</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-secondary opacity-0 check-indicator text-headline-sm">check_circle</span>
+</label>
+<label class="relative flex items-center gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all group category-card">
+<input class="sr-only" name="business_category" type="radio" value="apparel"/>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0 group-hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-data-metric">checkroom</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-semibold text-on-surface">Apparel &amp; Footwear</span>
+<span class="font-label-sm text-secondary">Sizes, variants, fits</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-secondary opacity-0 check-indicator text-headline-sm">check_circle</span>
+</label>
+<label class="relative flex items-center gap-3 p-3.5 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all group category-card sm:col-span-2">
+<input class="sr-only" name="business_category" type="radio" value="wholesale"/>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0 group-hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-data-metric">warehouse</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-semibold text-on-surface">Wholesale &amp; Small Fulfillment</span>
+<span class="font-label-sm text-secondary">Pallets, carton tracking, and multi-bay replenishment</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-secondary opacity-0 check-indicator text-headline-sm">check_circle</span>
+</label>
+</div>
+</div>
+<!-- 3. Operational Scale & Team Size -->
+<div class="space-y-3">
+<label class="block font-headline-sm text-on-surface">Team Size &amp; Scanning Stations</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<label class="relative p-4 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all text-center flex flex-col items-center justify-center gap-1.5 team-card">
+<input class="sr-only" name="team_scale" type="radio" value="solo"/>
+<span class="material-symbols-outlined text-headline-md text-secondary">person</span>
+<span class="font-body-semibold text-on-surface">Solo Operator</span>
+<span class="font-label-sm text-text-secondary">Just me &amp; 1 phone</span>
+</label>
+<label class="relative p-4 rounded-xl cursor-pointer bg-primary-fixed/30 shadow-sm transition-all text-center flex flex-col items-center justify-center gap-1.5 team-card">
+<input checked="" class="sr-only" name="team_scale" type="radio" value="small"/>
+<span class="material-symbols-outlined text-headline-md text-primary">groups</span>
+<span class="font-body-semibold text-on-surface">Small Team</span>
+<span class="font-label-sm text-text-secondary">2–5 members &amp; iPads</span>
+</label>
+<label class="relative p-4 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all text-center flex flex-col items-center justify-center gap-1.5 team-card">
+<input class="sr-only" name="team_scale" type="radio" value="warehouse"/>
+<span class="material-symbols-outlined text-headline-md text-secondary">forklift</span>
+<span class="font-body-semibold text-on-surface">Active Facility</span>
+<span class="font-label-sm text-text-secondary">6+ staff, scanners</span>
+</label>
+</div>
+</div>
+<!-- 4. Current Inventory Tracking Method -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<label class="block font-headline-sm text-on-surface">Current Tracking Method</label>
+<span class="font-label-sm text-status-success font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-label-md">bolt</span> Fast migration
+              </span>
+</div>
+<div class="space-y-2.5">
+<label class="relative flex items-start gap-3.5 p-4 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all method-card">
+<input checked="" class="mt-1 sr-only" name="current_tracker" type="radio" value="sheets"/>
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5">
+<div class="w-2 h-2 rounded-full bg-surface-white"></div>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-semibold text-on-surface">Spreadsheets (Excel, Google Sheets)</span>
+<span class="px-2 py-0.5 rounded-full bg-status-success/15 text-status-success font-label-sm font-semibold">1-Click Auto Import</span>
+</div>
+<p class="font-body-md text-secondary mt-0.5">
+                    We will format your existing CSV and detect your SKUs, reorder minimums, and suppliers instantly.
+                  </p>
+</div>
+</label>
+<label class="relative flex items-start gap-3.5 p-4 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all method-card">
+<input class="mt-1 sr-only" name="current_tracker" type="radio" value="paper"/>
+<div class="w-5 h-5 rounded-full bg-surface-dim flex items-center justify-center shrink-0 mt-0.5">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex-1">
+<span class="font-body-semibold text-on-surface">Pen &amp; Paper / Physical Stock Ledger</span>
+<p class="font-body-md text-secondary mt-0.5">
+                    We'll provide clean barcode scan templates and guided shelf count onboarding.
+                  </p>
+</div>
+</label>
+<label class="relative flex items-start gap-3.5 p-4 rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-all method-card">
+<input class="mt-1 sr-only" name="current_tracker" type="radio" value="fresh"/>
+<div class="w-5 h-5 rounded-full bg-surface-dim flex items-center justify-center shrink-0 mt-0.5">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex-1">
+<span class="font-body-semibold text-on-surface">Brand New Catalog / Migrating from Legacy POS</span>
+<p class="font-body-md text-secondary mt-0.5">
+                    Start fresh with intelligent category templates and automatic SKU generation rules.
+                  </p>
+</div>
+</label>
+</div>
+</div>
+<!-- 5. Currency & Regional Configuration -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="block font-label-md text-on-surface font-semibold" for="currencySelect">Primary Currency</label>
+<select class="w-full h-12 px-3.5 bg-surface-bright text-on-surface rounded-lg font-body-md shadow-sm outline-none cursor-pointer" id="currencySelect" name="currency">
+<option value="USD">USD ($) — United States Dollar</option>
+<option value="EUR">EUR (€) — Euro</option>
+<option value="GBP">GBP (£) — British Pound</option>
+<option value="CAD">CAD ($) — Canadian Dollar</option>
+<option value="AUD">AUD ($) — Australian Dollar</option>
+<option value="NGN">NGN (₦) — Nigerian Naira</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-md text-on-surface font-semibold" for="timezoneSelect">Stockroom Timezone</label>
+<select class="w-full h-12 px-3.5 bg-surface-bright text-on-surface rounded-lg font-body-md shadow-sm outline-none cursor-pointer" id="timezoneSelect" name="timezone">
+<option value="America/Los_Angeles">Pacific Time (US &amp; Canada) (GMT-7)</option>
+<option value="America/New_York">Eastern Time (US &amp; Canada) (GMT-4)</option>
+<option value="Europe/London">London / GMT (GMT+1)</option>
+<option value="Europe/Paris">Central European Time (GMT+2)</option>
+<option value="Africa/Lagos">West Africa Time (GMT+1)</option>
+<option value="Asia/Tokyo">Tokyo / JST (GMT+9)</option>
+</select>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 h-12 rounded-xl bg-primary-container text-surface-white font-body-semibold hover:bg-primary transition-all shadow-md active:scale-[0.99]" type="submit">
+<span>Continue to Inventory Preferences</span>
+<span class="material-symbols-outlined text-data-metric">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 h-12 rounded-xl text-secondary hover:text-on-surface font-label-md hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm">dataset</span>
+<span>Skip &amp; load demo catalog instead</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Visual Reassurance & Social Proof (Matching User Image Theme) -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Photo Card: Black business owner managing stockroom -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="relative h-64 sm:h-72 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A smiling Black female business owner in an olive jumpsuit holding a digital tablet in a bright, beautifully organized boutique stockroom with wooden shelving and apothecary goods bathed in warm natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ31fKmnP8OLLEmC1oWuM9dA7jt_8JpsJQpCgcHn2NTNpiNyU3sA30A0TOFjHjXdp9smF1dbXD2f_PvDqeTufV1mZjNdYI7bviVPqe1gmXfyX2FJnzpm1UbpgynLqSYcegDpe5VMDv5-iB1_-6YNG6wKTA12AqGmG2YOdd6xxxeAmGXCFqF-Zl5RPwLowdxAB_LKoZL5GYKoKnAMXvA9MqvF_0lC22q9kxDX6vOJC1PR57SF1qR4k1BQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-surface-white">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-white/20 backdrop-blur-md text-surface-white font-label-sm font-semibold mb-1.5">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+                Live Storefront Sync
+              </span>
+<p class="font-headline-sm font-bold drop-shadow-sm">Calm, audit-proof inventory control</p>
+</div>
+</div>
+<div class="p-6 space-y-5">
+<h3 class="font-headline-sm text-on-surface">What you unlock in under 3 minutes:</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-status-success/15 text-status-success flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-headline-sm">radar</span>
+</div>
+<div>
+<h4 class="font-body-semibold text-on-surface">Real-Time Low-Stock Radar</h4>
+<p class="font-body-md text-secondary mt-0.5">Automated color-coded alerts before products go backorder or run empty on the sales floor.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-headline-sm">qr_code_scanner</span>
+</div>
+<div>
+<h4 class="font-body-semibold text-on-surface">Zero-Hardware Mobile Scanner</h4>
+<p class="font-body-md text-secondary mt-0.5">Turn any iOS or Android device into an industrial-grade barcode &amp; SKU scanner with camera autofocus.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-headline-sm">history_edu</span>
+</div>
+<div>
+<h4 class="font-body-semibold text-on-surface">Immutable Shift Audit Trail</h4>
+<p class="font-body-md text-secondary mt-0.5">Track every adjustment, transfer, shrinkage log, and sale with SOC-2 compliant operator timestamps.</p>
+</div>
+</div>
+</div>
+<!-- Testimonial Quote -->
+<div class="p-4 rounded-xl bg-surface-container-low shadow-inner">
+<div class="flex items-center gap-1 text-primary-container mb-2">
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-label-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic">
+                “Setting up Stockora took under three minutes. For the first time in four years, our stockroom counts actually match our register.”
+              </p>
+<div class="flex items-center gap-3 mt-3">
+<div class="w-9 h-9 rounded-full bg-surface-dim overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up portrait photograph of Selimat Akinwale, Operations Director at Bloom &amp; Craft, warm confident expression against soft boutique background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzidps6eb5mZ_CN2scn7Ng_pkFb-C6wDWnKAkv9XCOM_VGryWu9IcDVHOCzxuRgub1KDjWXFnow1fzlNC81Q9wc1CYu9WFiSwtLIC3Egnhxc4ed1n5vA56ltHtUHQKItH8xCqTyI4KZq04s5NJHR1gVzDIbE9kTuVeFJH_cjE7EDB92VwAFNJZtz_LG6t6oMQkxCKldLg5TsNo6ae6L05fvoXkfrZm1DjR1mOY531nGVSVoJ1pl8nbFg"/>
+</div>
+<div>
+<p class="font-body-semibold text-on-surface text-label-md">Selimat Akinwale</p>
+<p class="font-label-sm text-text-secondary">Operations Lead • Bloom &amp; Craft</p>
+</div>
+</div>
+</div>
+<!-- Trust / Reassurance Bar -->
+<div class="pt-2 flex flex-wrap items-center justify-between gap-y-2 font-label-sm text-text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-label-md text-status-success">verified_user</span>
+                256-bit Bank Encryption
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-label-md text-status-success">credit_card_off</span>
+                No credit card needed
+              </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-label-md text-status-success">schedule</span>
+                14-day full access trial
+              </span>
+</div>
+</div>
+</div>
+<!-- Metric Mini-Banner -->
+<div class="bg-surface-container rounded-xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-white text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-headline-sm">check</span>
+</div>
+<div>
+<p class="font-body-semibold text-on-surface">38,200+ Small Retailers</p>
+<p class="font-label-sm text-secondary">Rely on STOCKORA daily for stock tranquility</p>
+</div>
+</div>
+<span class="font-label-sm font-semibold text-primary">99.98% Sync SLA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 7. Refined Footer -->
+<footer class="w-full bg-white border-t border-brand-border pt-16 pb-12" id="faq">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+<!-- Col 1: Brand & Bio (2 cols wide on desktop) -->
+<div class="lg:col-span-2 flex flex-col items-start pr-0 lg:pr-8">
+<a class="flex items-center gap-2.5 mb-4 group" href="#">
+<div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl font-bold">inventory_2</span>
+</div>
+<span class="font-display font-bold text-2xl tracking-tight text-brand-ink">STOCKORA</span>
+</a>
+<p class="text-sm text-brand-muted leading-relaxed max-w-sm mb-6">
+            Know your stock. Stay in control. Modern inventory clarity built for retail storefronts, small fulfillment bays, and growing product creators.
+          </p>
+<div class="text-xs text-brand-subtle">
+            Headquartered in San Francisco, CA &amp; London, UK
+          </div>
+</div>
+<!-- Col 2: Product -->
+<div>
+<h4 class="font-display font-bold text-sm text-brand-ink tracking-wider uppercase mb-4">Product</h4>
+<ul class="space-y-3 text-sm text-brand-muted">
+<li><a class="hover:text-brand-orange transition-colors" href="#features">Features</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#features">Inventory Registry</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#mobile">Mobile App</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#releases">Releases &amp; Changelog</a></li>
+</ul>
+</div>
+<!-- Col 3: Resources -->
+<div>
+<h4 class="font-display font-bold text-sm text-brand-ink tracking-wider uppercase mb-4">Resources</h4>
+<ul class="space-y-3 text-sm text-brand-muted">
+<li><a class="hover:text-brand-orange transition-colors" href="#docs">Documentation</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#guides">Audit Guides</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#api">API Reference</a></li>
+<li>
+<a class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold hover:bg-emerald-100 transition-colors" href="#status">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                All Systems Operational
+              </a>
+</li>
+</ul>
+</div>
+<!-- Col 4: Company & Legal -->
+<div>
+<h4 class="font-display font-bold text-sm text-brand-ink tracking-wider uppercase mb-4">Company &amp; Legal</h4>
+<ul class="space-y-3 text-sm text-brand-muted">
+<li><a class="hover:text-brand-orange transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#privacy">Privacy Policy</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#terms">Terms of Service</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#security">Security &amp; SOC-2</a></li>
+<li><a class="hover:text-brand-orange transition-colors" href="#contact">Contact Support</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-subtle">
+<p>© 2026 STOCKORA Systems Inc. Built for operational calm.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-brand-ink transition-colors" href="#privacy">Privacy</a>
+<a class="hover:text-brand-ink transition-colors" href="#terms">Terms</a>
+<a class="hover:text-brand-ink transition-colors" href="#security">Security</a>
+</div>
+</div>
+</div>
+</footer>
